@@ -1,8 +1,3 @@
-## Run SonarQube as a Docker Container
-docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:8.9.1-community
-
-## Jenkinsfile with SonarQube and QualityGate Stage
-### Replace the host, port, token values
 pipeline {
   agent any
 
@@ -67,5 +62,3 @@ pipeline {
 
 }
 
-
- 219e46362b50dde904f746d4c691f48d0bc91fa1
