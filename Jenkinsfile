@@ -35,13 +35,8 @@ pipeline {
       steps {
         sh "mvn sonar:sonar -Dsonar.projectKey=sonartest -Dsonar.host.url=http://devsecops-rveeranki.westeurope.cloudapp.azure.com:9000 -Dsonar.login=4554284e800ccd7433269b016d0100c09828466a"
       }
-      timeout(time: 2, unit: 'MINUTES') {
-          script {
-            waitForQualityGate abortPipeline: true
     }
-   }
-  }
- }
+      
     stage('Docker Build and Push') {
       steps {
         withDockerRegistry([credentialsId: "docker-hub", url: ""]) {
@@ -62,4 +57,5 @@ pipeline {
     }
 
   }
+}
 
