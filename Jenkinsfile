@@ -33,7 +33,7 @@ pipeline {
     }
     stage('SonarQube - SAST') {
       steps {
-        sh "mvn sonar:sonar -Dsonar.projectKey=sonartest -Dsonar.host.url=http://devsecops-rveeranki.westeurope.cloudapp.azure.com:9000 -Dsonar.login=4554284e800ccd7433269b016d0100c09828466a"
+        sh "mvn sonar:sonar -Dsonar.projectKey=numeric-app -Dsonar.host.url=http://devsecops-rveeranki.westeurope.cloudapp.azure.com:9000 Dsonar.login=994556b0c6d0fd0e15d5cd58d243f2f2ffbb4a48"
       }
     }
       
@@ -41,8 +41,8 @@ pipeline {
       steps {
         withDockerRegistry([credentialsId: "docker-hub", url: ""]) {
           sh 'printenv'
-          sh 'docker build -t rveeranki067/numeric-app:""$GIT_COMMIT"" .'
-          sh 'docker push rveeranki067/numeric-app:""$GIT_COMMIT""'
+          sh 'docker build -t rveeranki06/numeric-app:""$GIT_COMMIT"" .'
+          sh 'docker push rveeranki06/numeric-app:""$GIT_COMMIT""'
         }
       }
     }
