@@ -21,7 +21,8 @@ pipeline {
         }
       }
     }
-    stage('Mutation Tests - PIT') {
+  /*
+  stage('Mutation Tests - PIT') {
       steps {
         sh "mvn org.pitest:pitest-maven:mutationCoverage"
       }
@@ -31,6 +32,7 @@ pipeline {
         }
       }
     }
+*/
     stage('SonarQube - SAST') {
       steps {
         sh "mvn clean verify sonar:sonar -Dsonar.projectKey=number-project -Dsonar.host.url=http://devsecops-rveeranki.westeurope.cloudapp.azure.com:9000 -Dsonar.login=219e46362b50dde904f746d4c691f48d0bc91fa1"
