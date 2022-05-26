@@ -36,11 +36,6 @@ pipeline {
         withSonarQubeEnv('SonarQube') {
         sh "mvn sonar:sonar -Dsonar.projectKey=numeric-app -Dsonar.host.url=http://devsecops-rveeranki.westeurope.cloudapp.azure.com:9000 -Dsonar.login=994556b0c6d0fd0e15d5cd58d243f2f2ffbb4a48"
       }
-        timeout(time: 2, unit: 'MINUTES') {
-          script {
-            waitForQualityGate abortPipeline: true
-      }
-    }
    }
  }    
     stage('Vulnerability Scan - Docker ') {
