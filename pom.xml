@@ -87,11 +87,11 @@
 		      </outputFormats>
 		   </configuration>
 		</plugin>	
-		<plugin>
+		<!-- <plugin>
 		   <groupId>org.owasp</groupId>
 		   <artifactId>dependency-check-maven</artifactId>
 		   <version>6.1.6</version>
-		  <!--  <configuration>
+		   <configuration>
 		      <format>ALL</format> -->
 		     <failBuildOnCVSS>11</failBuildOnCVSS>
 		      <!-- fail the build for CVSS greater than or equal to 10 -->
@@ -109,7 +109,8 @@
 							    </suppressionFiles> 
 							 -->
 		   </configuration>
-		</plugin>
+		</plugin> 
+	-->
 		</plugins>
 	</build>
 </project>
