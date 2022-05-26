@@ -87,13 +87,13 @@
 		      </outputFormats>
 		   </configuration>
 		</plugin>	
-		<!-- <plugin>
+		 <plugin>
 		   <groupId>org.owasp</groupId>
 		   <artifactId>dependency-check-maven</artifactId>
 		   <version>6.1.6</version>
 		   <configuration>
 		      <format>ALL</format> -->
-		     <failBuildOnCVSS>11</failBuildOnCVSS>
+		     <failBuildOnCVSS>10.1</failBuildOnCVSS>
 		      <!-- fail the build for CVSS greater than or equal to 10 -->
 		      <!-- 
 					      use internal mirroring of CVE contents 
@@ -110,7 +110,7 @@
 							 -->
 		   </configuration>
 		</plugin> 
-	-->
+	
 		</plugins>
 	</build>
 </project>
