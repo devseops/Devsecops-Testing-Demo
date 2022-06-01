@@ -1,4 +1,4 @@
-FROM nginx:1.14.2-alpine
+FROM kibana:4.0.2
 #FROM openjdk:8-jdk-alpine
 EXPOSE 8080
 ARG JAR_FILE=target/*.jar
